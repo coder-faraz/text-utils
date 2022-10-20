@@ -88,7 +88,7 @@ export default function Body(props) {
 
         <div className="container my-3">
             <h3> Text Summary</h3>
-            <p>{text.split(" ").filter((elem) => elem.length !== 0).length} words &nbsp;and&nbsp; {text.length} characters</p>
+            <p>{text.split(/\s+/).filter((elem) => elem.length !== 0).length} words &nbsp;and&nbsp; {text.length} characters</p>
         </div>
       </>
     )
