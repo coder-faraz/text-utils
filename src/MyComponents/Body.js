@@ -60,6 +60,9 @@ export default function Body(props) {
         navigator.clipboard.writeText(selection.value);     //clipboard api of navigator object to access system
                                                             //clipboard  & permission of writeText or readText
         showAlert("success");
+        setTimeout(() => {      //this will deselect the text, selected above after 1.6s
+            document.getSelection().removeAllRanges();
+        }, 1600)
     }
 
     let clearTextHandler = () => {
